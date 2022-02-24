@@ -161,7 +161,7 @@ if ('telco_churn_cml' not in list(spark.sql("show tables in default").toPandas()
         )
 
 # Show the data in the hive table
-spark.sql("select * from default.telco_churn_cml").show()
+spark.sql("select * from default.telco_churn_cml").toPandas()
 
 # To get more detailed information about the hive table you can run this:
 spark.sql("describe formatted default.telco_churn_cml").toPandas()
